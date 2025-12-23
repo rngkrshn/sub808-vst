@@ -1,0 +1,24 @@
+# JUCE generated
+Builds/
+JuceLibraryCode/
+
+# macOS
+.DS_Store
+
+# Plugin binaries
+*.vst3
+*.component
+# JUCE generated
+Builds/
+JuceLibraryCode/
+
+# macOS
+.DS_Store
+
+# Plugin binaries
+*.vst3
+*.component
+
+
+
+
