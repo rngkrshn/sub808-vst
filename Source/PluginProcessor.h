@@ -55,5 +55,11 @@ public:
 
 private:
     //==============================================================================
+    
+    double sampleRateHz = 44100.0;
+    float phase = 0.0f;
+    float phaseDelta = 0.0f;
+    juce::ADSR adsr;
+    juce::ADSR::Parameters adsrParams;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Sub808AudioProcessor)
 };
