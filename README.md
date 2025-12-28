@@ -9,9 +9,8 @@ The plugin is intentionally simple: a monophonic sine oscillator driven by MIDI 
 ## Features
 - Monophonic sine-wave oscillator
 - MIDI note input (pitch from note number)
-- ADSR envelope (Attack, Decay, Sustain, Release)
+- ADSR control (Attack, Decay, Sustain, Release)
 - Gain control
-- Custom rotary knob LookAndFeel
 - APVTS-based parameter management
 - VST3 support (AU via JUCE)
 
@@ -44,14 +43,12 @@ The plugin is intentionally simple: a monophonic sine oscillator driven by MIDI 
 
 ## Status
 - Monophonic only  
-- Sine oscillator only  
-- No pitch envelope or distortion yet  
 - UI is functional, not production-polished  
 
 ---
 
 ## Roadmap
 - Pitch envelope (808 drop)
-- Drive / saturation
+- Drive/saturation
 - Presets
 - UI refinements
