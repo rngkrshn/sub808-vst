@@ -9,7 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-
+#include <juce_audio_processors/juce_audio_processors.h>
 //==============================================================================
 /**
 */
@@ -52,7 +52,9 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
-
+    //==============================================================================
+    juce::AudioProcessorValueTreeState apvts;
+    static juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
 private:
     //==============================================================================
     
@@ -61,5 +63,11 @@ private:
     float phaseDelta = 0.0f;
     juce::ADSR adsr;
     juce::ADSR::Parameters adsrParams;
+    // New DSP state for pitch/glide/tone
+    float currentFreq = 0.0f;
+    float targetFreq  = 0.0f;
+    int   glideSamplesRemaining = 0;
+    float toneZ[2] { 0.0f, 0.0f };
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Sub808AudioProcessor)
 };
+
